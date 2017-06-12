@@ -1,0 +1,16 @@
+<div class="row">
+    <div class="col-xs-10">
+        <app-hare-edit></app-hare-edit>
+        <hr>
+        <ul class="list-group">
+            <a
+                    class="list-group-item"
+                    style="cursor: pointer"
+                    *ngFor="let hare of hares | sortBy: [sortField]; let i = index"
+                    (click)="onEditItem(i)"
+                    >
+                {{ hare.name }} ({{ hare.amount }})
+            </a>
+        </ul>
+    </div>
+</div>
